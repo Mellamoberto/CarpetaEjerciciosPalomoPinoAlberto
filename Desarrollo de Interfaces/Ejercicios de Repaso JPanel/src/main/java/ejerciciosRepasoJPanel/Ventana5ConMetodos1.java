@@ -4,24 +4,24 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Ventana6ConMetodos1 extends JFrame {
+public class Ventana5ConMetodos1 extends JFrame {
 	private JPanel panel;
 
 	public static void main(String[] args) {
-		Ventana5ConMetodos ventana = new Ventana5ConMetodos();
+		Ventana5ConMetodos1 ventana = new Ventana5ConMetodos1();
 		ventana.inicializarVentana();
 		int y = 50;
 
 		String[] botones = { "aceptar", "cancelar", "avanzar" };
 
 		for (String nombreBoton : botones) {
-			ventana.agregarBoton(nombreBoton, y, 100);
-			y = y + 100;
+			ventana.agregarBoton(nombreBoton, 50, y);
+			y = y + 50;
 		}
 
 	}
-
-	public void inicializarVentana() {
+	
+	private void inicializarVentana() {
 		setSize(300, 300);
 		setVisible(true);
 		panel = new JPanel();
@@ -37,3 +37,4 @@ public class Ventana6ConMetodos1 extends JFrame {
 	
 
 }
+

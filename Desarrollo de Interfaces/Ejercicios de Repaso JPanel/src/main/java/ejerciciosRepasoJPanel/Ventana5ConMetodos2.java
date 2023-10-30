@@ -8,7 +8,7 @@ public class Ventana5ConMetodos2 extends JFrame  {
 	private JPanel panel;
 	
 	public static void main(String[] args) {
-		Ventana5ConMetodos ventana = new Ventana5ConMetodos();
+		Ventana5ConMetodos2 ventana = new Ventana5ConMetodos2();
 		ventana.inicializarVentana();
 		int y=50;
 		for(int i=1; i<=3; i++) {
@@ -17,8 +17,7 @@ public class Ventana5ConMetodos2 extends JFrame  {
 		}
 		
 	}
-
-	public void inicializarVentana() {
+	private void inicializarVentana() {
 		setSize(300, 300);
 		setVisible(true);
 		panel = new JPanel();
@@ -31,8 +30,6 @@ public class Ventana5ConMetodos2 extends JFrame  {
 		botonBienvenido.setBounds(x, y, 100, 50);
 		panel.add(botonBienvenido);
 	}
-	
-	
 	
 
 }
