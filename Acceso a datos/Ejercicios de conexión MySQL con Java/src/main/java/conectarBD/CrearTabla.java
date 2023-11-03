@@ -5,26 +5,23 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+public class CrearTabla {
+	public static void main(String[] args) throws Exception {
 
-		public class CrearTabla {
-			public static void main(String[] args) throws Exception {
-				// TODO Esbozo de m�todo generado autom�ticamente
-				Connection conn = null;
-				Statement stmt = null;  	
-				String sql="CREATE TABLE Videojuegos (id INT PRIMARY KEY,"
-						+ "nombre VARCHAR(60) NOT NULL, "
-						+ "genero VARCHAR(40))";   	 
-				try {
-				  conn = DriverManager.getConnection(
-		             "jdbc:mysql://localhost/Nintendo","root","admin");
-				  stmt = conn.createStatement();
-				  stmt.execute(sql);
-				  System.out.println("Creada la tabla Videojuegos");
-				  conn.close();
-				  stmt.close();
-				} catch (SQLException e) {
-					// TODO Bloque catch generado autom�ticamente
-					e.printStackTrace();
-				}
-			}
+		Connection conn = null;
+		Statement stmt = null;
+		String sql = "CREATE TABLE clientes (id INT PRIMARY KEY," + "nif VARCHAR(10) NOT NULL,"
+				+ "nombre VARCHAR(60) NOT NULL, " + "Edad VARCHAR(2))";
+		try {
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
+			stmt = conn.createStatement();
+			stmt.execute(sql);
+			System.out.println("Creada la tabla clientes");
+			conn.close();
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Bloque catch generado automáticamente
+			e.printStackTrace();
+		}
 	}
+}

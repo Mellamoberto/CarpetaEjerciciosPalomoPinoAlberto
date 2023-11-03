@@ -6,18 +6,24 @@ import java.sql.SQLException;
 
 public class ConectarBD {
 
-    public static void main(String[] args) throws SQLException {
-        // TODO Auto-generated method stub
-
-        Connection conect = null;
-        try {
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/Nintendo", "root", "admin");
-            if (conect != null) {
-                System.out.println("Conexion a base de datos ok");
-                conect.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}
+	public static void main(String[] args) throws SQLException {
+		// TODO Esbozo de método generado automáticamente
+		Connection conect=null;
+		try {
+			conect=DriverManager.
+					getConnection("jdbc:mysql://localhost/empresa","root","");
+			if (conect!=null) {
+				System.out.println("Conexión a base de datos ok");
+				conect.close();
+			}
+		}
+		catch (SQLException e)
+		{ System.out.println("Error en la conexión " +e.getMessage());
+					
+	
+			}
+			
+			
+		}
+			
+	}
