@@ -9,7 +9,7 @@ public class InsertarDatos {
 	public static void main(String[] args) throws SQLException {
 		Connection conn = null;
 		Statement stmt = null;
-		String sql = "INSERT INTO clientes (id, nif, nombre, edad) " + "VALUES (1, '11111', 'Alberto', 40)";
+		String sql = "INSERT INTO clientes (id, nif, nombre, edad) " + "VALUES (5, '55555', 'Raul', 65)";
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
 			stmt = conn.createStatement();

@@ -12,18 +12,16 @@ public class CrearProcedimiento {
 
 	public static void main(String[] args) {
 		Connection conn = null;
-		PreparedStatement presta = null; // Cambio de nombre de la variable
+		PreparedStatement presta = null;
 		String dropProcedure = "DROP PROCEDURE IF EXISTS ObtenerClientes";
 		String createProcedure = "CREATE PROCEDURE ObtenerClientes() " + "BEGIN " + "SELECT * FROM clientes;" + "END;";
 
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
 
-// Primero, eliminamos el procedimiento si existe
 			presta = conn.prepareStatement(dropProcedure);
 			presta.executeUpdate();
 
-// Luego, creamos el procedimiento
 			presta = conn.prepareStatement(createProcedure);
 			presta.executeUpdate();
 

@@ -13,7 +13,7 @@ public class InvocarProcedimiento2 {
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
 
-			cstmt = conn.prepareCall("call CalculaEdad1(?,?");
+			cstmt = conn.prepareCall("call CalculaEdad1(?,?)");
 			cstmt.setInt(1, 1977);
 			cstmt.registerOutParameter(2, Types.INTEGER);
 
