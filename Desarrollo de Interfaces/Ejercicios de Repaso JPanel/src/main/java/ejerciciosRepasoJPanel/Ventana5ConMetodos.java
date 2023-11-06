@@ -35,3 +35,27 @@ public class Ventana5ConMetodos extends JFrame  {
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

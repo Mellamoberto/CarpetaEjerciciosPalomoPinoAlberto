@@ -16,6 +16,8 @@ public class VentanaConEtiqueta {
 
 		JLabel texto = new JLabel("Hola, Alberto");
 		ventana.getContentPane().add(texto);
+		
+		ventana.setLocation(300, 300);
 
 		ventana.setVisible(true);
 
