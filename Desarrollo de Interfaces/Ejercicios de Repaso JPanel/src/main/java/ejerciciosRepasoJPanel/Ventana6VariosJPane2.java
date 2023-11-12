@@ -57,7 +57,7 @@ public class Ventana6VariosJPane2 extends JFrame {
 					abrirVentanasSecundaria(ventanaIndex);
 				}
 			});
-			panelVentanas2.add(ventanaBoton);
+			panelVentanas.add(ventanaBoton);
 		}
 
         setLayout(new BorderLayout());
@@ -66,7 +66,7 @@ public class Ventana6VariosJPane2 extends JFrame {
         add(panelMensaje, BorderLayout.NORTH);
         panelMensaje.add(etiquetaMensaje);
         panelMensaje.add(etiquetaBienvenido);
-        add(panelVentanas2, BorderLayout.CENTER);
+        add(panelVentanas, BorderLayout.CENTER);
         
         
         
