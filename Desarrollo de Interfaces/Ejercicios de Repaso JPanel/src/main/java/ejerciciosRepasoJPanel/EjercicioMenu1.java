@@ -16,7 +16,7 @@ public class EjercicioMenu1 extends JFrame implements ActionListener {
     private JMenuItem mi1, mi2, mi3;
 
     public EjercicioMenu1() {
-        setTitle("Ejemplo de Menú con JFrame");
+        setTitle("Ejemplo de Menu con JFrame");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
