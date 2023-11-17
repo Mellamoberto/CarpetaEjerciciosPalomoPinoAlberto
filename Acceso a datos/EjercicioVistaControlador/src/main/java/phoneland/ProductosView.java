@@ -9,7 +9,9 @@ public class ProductosView {
 	private String nombre;
 	private String fabricante;
 	private float precio;
+	private float pvp;
 	private String descripcion;
+	private String columna8;
 	
 	public void mostrarProductos(List<Productos> productos) {
 		for (Productos producto : productos) {
@@ -18,7 +20,9 @@ public class ProductosView {
 			System.out.println("Nombre: "+producto.getNombre());
 			System.out.println("Fabricante: "+producto.getFabricante());
 			System.out.println("Precio: "+producto.getPrecio());
+			System.out.println("PVP: "+producto.getPvp());
 			System.out.println("Descripcion: "+producto.getDescripcion());
+			System.out.println("Columna 8: "+producto.getColumna8());
 			System.out.println();
 		}
 	}

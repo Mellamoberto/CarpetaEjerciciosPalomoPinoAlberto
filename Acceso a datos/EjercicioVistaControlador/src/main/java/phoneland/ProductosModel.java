@@ -23,13 +23,15 @@ public class ProductosModel {
 
 		
 		while(rs.next()) {
-			int id_producto = rs.getInt("id_producto");
-			int id_proveedor = rs.getInt("id_proveedor");
-			String nombre = rs.getString("nombre");
-			String fabricante = rs.getString("fabricante");
-			float precio = rs.getFloat("precio");
-			String descripcion = rs.getString("descripcion");
-			productos.add(new Productos(id_producto,id_proveedor,nombre,fabricante,precio,descripcion));
+			int id_producto = rs.getInt("ID_Producto");
+			int id_proveedor = rs.getInt("ID_Proveedor");
+			String nombre = rs.getString("Nombre");
+			String fabricante = rs.getString("Fabricante");
+			String precio = rs.getString("Precio");
+			String pvp = rs.getString("PVP");
+			String descripcion = rs.getString("Descripcion");
+			String columna8 = rs.getString("Columna 8");
+			productos.add(new Productos(id_producto,id_proveedor,nombre,fabricante,precio,pvp,descripcion,columna8));
 			}
 		stmt.close();
 		rs.close();

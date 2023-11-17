@@ -3,9 +3,6 @@ package phoneland;
 import java.sql.SQLException;
 import java.util.List;
 
-import simulacro.Productos;
-import simulacro.ProductosModel;
-import simulacro.ProductosView;
 
 public class ProductosController {
 	private ProductosModel model;
