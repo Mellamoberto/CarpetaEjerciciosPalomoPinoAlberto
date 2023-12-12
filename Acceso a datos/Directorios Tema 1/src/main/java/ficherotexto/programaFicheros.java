@@ -97,6 +97,7 @@ public class programaFicheros {
 				System.out.println("Seleccionaste Borrar archivo.");
 				if (directorio != null) {
 					ruta = directorio.getPath();
+					System.out.println("Ruta del archivo: " + directorio.getPath());
 					System.out.print("Dime el nombre del fichero: ");
 					String nombreFichero = sc.nextLine();
 					String rutaFichero = ruta + File.separator + nombreFichero;
@@ -118,8 +119,32 @@ public class programaFicheros {
 				}
 				System.out.println();
 			case 5:
-				System.out.println("Seleccionaste Escribir archivo.");
-				break;
+				/*
+			    System.out.println();
+			    System.out.println("Seleccionaste Escribir archivo.");
+			    
+			    if (directorio != null) {
+			    ruta = directorio.getPath();
+			    System.out.println("Ruta del archivo: " + directorio.getPath());
+			    
+			    System.out.println("¿Qué archivo quieres escribir?");
+			    String nombreArchivo = sc.nextLine();
+			    
+			    String rutaFichero = ruta + File.separator + nombreArchivo;
+
+			    System.out.println("¿Qué quieres escribir dentro del fichero " + nombreArchivo + "?");
+			    String contenido = sc.nextLine();
+
+			    try (BufferedWriter fw = new BufferedWriter(new FileWriter(ruta + nombreArchivo))) {
+			        System.out.println("Archivo " + nombreArchivo + " escrito correctamente.");
+			        fw.write(contenido);
+			    } catch (IOException e) {
+			        e.printStackTrace();
+			        System.err.println("Error al escribir en el archivo " + ruta + nombreArchivo);
+			    }
+			    }
+			    */
+			    break;
 			case 6:
 				System.out.println("Seleccionaste Leer archivo.");
 				break;
