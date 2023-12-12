@@ -35,6 +35,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/App-d/OneDrive/Documents/GitHub/CarpetaEjerciciosPalomoPinoAlberto/Acceso a datos/mysql-connector-j-8.0.33.jar"/>
+	<classpathentry kind="lib" path="C:/Users/2DAM/Documents/GitHub/CarpetaEjerciciosPalomoPinoAlberto/Acceso a datos/mysql-connector-j-8.0.33.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
