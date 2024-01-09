@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Proyecto2Trimestre"
         tools:targetApi="31">
         <activity
+            android:name=".ui.theme.Ejercicio3MiPrimeraApp"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.Ejercicio2MiPrimeraApp"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.Ejercicio1MiPrimeraApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.theme.ConstraintLayoutAvanzadoActivity"
             android:exported="false" />
         <activity
