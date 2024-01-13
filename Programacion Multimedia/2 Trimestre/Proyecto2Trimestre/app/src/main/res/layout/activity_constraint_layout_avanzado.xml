@@ -7,42 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.theme.ConstraintLayoutAvanzadoActivity">
 
-    <View
-        android:id="@+id/view0"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#E15353"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#03A9F4"
-        app:layout_constraintTop_toTopOf="@id/view0"
-        app:layout_constraintBottom_toBottomOf="@id/view0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#FFC107"
-        app:layout_constraintTop_toTopOf="@id/view0"
-        app:layout_constraintBottom_toBottomOf="@id/view0"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#673AB7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/view0"
-        />
 
     <View
         android:id="@+id/view1"
@@ -54,6 +18,15 @@
         />
 
     <View
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#673AB7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view0"
+        />
+
+    <View
         android:id="@+id/view3"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -62,7 +35,75 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#03A9F4"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#E15353"
+        app:layout_constraintBottom_toBottomOf="@id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view2" />
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFC107"
+        app:layout_constraintTop_toTopOf="@id/view3"
+        app:layout_constraintBottom_toBottomOf="@id/view8"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#C861182D"
+        app:layout_constraintTop_toTopOf="@id/view4"
+        app:layout_constraintBottom_toBottomOf="@id/view9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
         android:id="@+id/view7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#6D4907FF"
+        app:layout_constraintTop_toTopOf="@id/view0"
+        app:layout_constraintBottom_toBottomOf="@id/view9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#07FFCD"
+        app:layout_constraintTop_toTopOf="@id/view4"
+        app:layout_constraintBottom_toBottomOf="@id/view9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#9C27B0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view10"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#795548"
@@ -70,19 +111,11 @@
         app:layout_constraintStart_toStartOf="@id/view0" />
 
     <View
-        android:id="@+id/view8"
+        android:id="@+id/view11"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <View
-        android:id="@+id/view6"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
