@@ -251,6 +251,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/btnDelete"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="50dp"
         />
