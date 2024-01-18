@@ -1,11 +1,16 @@
 package modelo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.sql.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
 import org.hibernate.query.Query;
+
 
 import java.util.List;
 
