@@ -11,7 +11,8 @@ import java.util.List;
 
 public class VerDatosFabricante {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+
         // Configurar la sesión de Hibernate
         SessionFactory sessionFactory = new Configuration()
                 .configure()
@@ -40,6 +41,7 @@ public class VerDatosFabricante {
             for (Fabricante f : fabricantes) {
                 System.out.println(f.toString());
             }
+
             session.getTransaction().commit();
 
         } catch (Exception e) {
