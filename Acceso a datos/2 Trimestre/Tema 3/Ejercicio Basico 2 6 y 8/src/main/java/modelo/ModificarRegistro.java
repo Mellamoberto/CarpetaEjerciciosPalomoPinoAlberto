@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class ModificarDatos {
+public class ModificarRegistro {
 
 	public static void main(String[] args) {
 

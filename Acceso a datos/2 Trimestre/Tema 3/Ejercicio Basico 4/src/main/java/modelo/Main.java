@@ -1,48 +1,36 @@
 package modelo;
 
+import java.sql.Date;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
-import org.hibernate.query.Query;
 
-import java.util.List;
-
-public class ModificarDatos {
+public class Main {
 
 	public static void main(String[] args) {
-
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
 		ThreadLocalSessionContext context = new ThreadLocalSessionContext((SessionFactoryImplementor) sessionFactory);
 		context.bind(sessionFactory.openSession());
-
+		
 		try {
+			Videojuego videojuego = new Videojuego("God of War", 2005, "Sony", 50.00f, "Kratos tiene que derrotar al dios de la guerra", "PS2");
+
 			Session session = context.currentSession();
 
 			session.beginTransaction();
 
-			String updateHql = "UPDATE Fabricante SET nombre = 'Gandalf' WHERE id = 10";
-			Query<?> updateQuery = session.createQuery(updateHql);
-			updateQuery.executeUpdate();
-
-			String selectHql = "FROM Fabricante WHERE id = 10";
-			Query<Fabricante> selectQuery = session.createQuery(selectHql, Fabricante.class);
-			List<Fabricante> fabricantes = selectQuery.list();
-
-			System.out.println("Registros en la tabla fabricante después de la actualización:");
-			for (Fabricante f : fabricantes) {
-				System.out.println(f.toString());
-			}
+			session.save(videojuego);
 
 			session.getTransaction().commit();
 
+			System.out.println("Cliente: " + videojuego);
+
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			context.unbind(sessionFactory);
-			sessionFactory.close();
 		}
+
 	}
 }

@@ -5,44 +5,31 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
-import org.hibernate.query.Query;
 
-import java.util.List;
-
-public class ModificarDatos {
+public class Main {
 
 	public static void main(String[] args) {
-
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
 		ThreadLocalSessionContext context = new ThreadLocalSessionContext((SessionFactoryImplementor) sessionFactory);
 		context.bind(sessionFactory.openSession());
-
+		
 		try {
+			Producto producto = new Producto("El imperio final", "Nueva era de fantasia epica", 20.00f, "Nova Editorial", 80);
+
 			Session session = context.currentSession();
 
 			session.beginTransaction();
 
-			String updateHql = "UPDATE Fabricante SET nombre = 'Gandalf' WHERE id = 10";
-			Query<?> updateQuery = session.createQuery(updateHql);
-			updateQuery.executeUpdate();
-
-			String selectHql = "FROM Fabricante WHERE id = 10";
-			Query<Fabricante> selectQuery = session.createQuery(selectHql, Fabricante.class);
-			List<Fabricante> fabricantes = selectQuery.list();
-
-			System.out.println("Registros en la tabla fabricante después de la actualización:");
-			for (Fabricante f : fabricantes) {
-				System.out.println(f.toString());
-			}
+			session.save(producto);
 
 			session.getTransaction().commit();
 
+			System.out.println("Cliente: " + producto);
+
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			context.unbind(sessionFactory);
-			sessionFactory.close();
 		}
+
 	}
 }
