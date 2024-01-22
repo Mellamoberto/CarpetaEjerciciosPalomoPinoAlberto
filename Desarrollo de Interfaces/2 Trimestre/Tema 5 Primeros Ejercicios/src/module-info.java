@@ -5,10 +5,10 @@ module componentes {
 	requires javafx.base;
 	
 	opens Ejercicio1 to javafx.graphics, javafx.fxml;
-	exports Ejercicio2;
+	exports Ejercicio1;
 	
 	opens Ejercicio3 to javafx.fxml;
-    exports Ejercicio3;
+	exports Ejercicio3;
     
     opens Ejercicio4 to javafx.fxml;
     exports Ejercicio4;
@@ -24,4 +24,7 @@ module componentes {
     
     opens Ejercicio9 to javafx.fxml;
     exports Ejercicio9;
+    
+    opens Ejercicio10 to javafx.fxml;
+    exports Ejercicio10;
 }

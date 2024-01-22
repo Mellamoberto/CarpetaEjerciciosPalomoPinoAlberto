@@ -1,4 +1,4 @@
-package Ejercicio10;
+package Ejercicio2Controles;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,14 +9,14 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 import javafx.event.*;
 
-public class Ejercicio10 extends Application {
+public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("Ejercicio10.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Ejercicio2Controles.fxml"));
 			Parent root = loader.load();
-			primaryStage.setTitle("Demo de VBox");
-			primaryStage.setScene(new Scene(root, 500, 500));
+			primaryStage.setTitle("Controles Ejercicio 2");
+			primaryStage.setScene(new Scene(root, 400, 200));
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
