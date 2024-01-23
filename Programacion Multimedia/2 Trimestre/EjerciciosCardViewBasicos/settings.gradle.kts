@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Ejercicio3"
+rootProject.name = "EjerciciosCardviewBasicos"
 include(":app")

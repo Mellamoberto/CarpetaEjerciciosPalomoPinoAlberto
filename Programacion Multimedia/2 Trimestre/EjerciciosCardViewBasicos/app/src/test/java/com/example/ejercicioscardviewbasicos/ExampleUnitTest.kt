@@ -1,4 +1,4 @@
-package com.example.ejercicio3
+package com.example.ejercicioscardviewbasicos
 
 import org.junit.Test
 

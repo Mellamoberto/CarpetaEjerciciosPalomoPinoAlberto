@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ejercicio3"
+    namespace = "com.example.ejercicioscardviewbasicos"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ejercicio3"
+        applicationId = "com.example.ejercicioscardviewbasicos"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

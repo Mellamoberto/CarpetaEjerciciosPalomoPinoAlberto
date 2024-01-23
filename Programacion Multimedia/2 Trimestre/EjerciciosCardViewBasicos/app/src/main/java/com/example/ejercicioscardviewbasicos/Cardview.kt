@@ -1,10 +1,11 @@
-package com.example.ejercicio3
+package com.example.ejercicioscardviewbasicos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
+import com.example.ejercicioscardviewbasicos.R
 
 private lateinit var tvIngresos: TextView
 private val incrementoDeIngresos = 100
