@@ -1,4 +1,4 @@
-package com.example.ejercicioscardviewbasicos
+package com.example.cardviewfinal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,16 +6,12 @@ import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
-private lateinit var tvIngresos: TextView
-private val incrementoDeIngresos = 100
-
-class Cardview : AppCompatActivity() {
+class Main : AppCompatActivity() {
     private lateinit var tvIngresos: TextView
     private val incrementoDeIngresos = 100
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cardview)
+        setContentView(R.layout.activity_main)
 
         val rangeSlider = findViewById<RangeSlider>(R.id.rsEdad)
         val tvAnos = findViewById<TextView>(R.id.tvAnos)
