@@ -12,6 +12,15 @@ precio DOUBLE NOT NULL,
 codigo_fabricante INT UNSIGNED NOT NULL,
 FOREIGN KEY (codigo_fabricante) REFERENCES fabricante(codigo)
 );
+CREATE TABLE compras (
+    idcompras INT NOT NULL AUTO_INCREMENT,
+    fecha DATE NULL DEFAULT '0000-00-00', 
+    id_producto INT NULL DEFAULT NULL,
+    unidades INT NULL DEFAULT NULL,
+    PRIMARY KEY (idcompras),               
+    INDEX id_producto (id_producto)     
+);
+
 INSERT INTO fabricante VALUES(1, 'Asus');
 INSERT INTO fabricante VALUES(2, 'Lenovo');
 INSERT INTO fabricante VALUES(3, 'Hewlett-Packard');

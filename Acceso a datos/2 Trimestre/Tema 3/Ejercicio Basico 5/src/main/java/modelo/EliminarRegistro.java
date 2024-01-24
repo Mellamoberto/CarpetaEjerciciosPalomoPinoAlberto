@@ -1,15 +1,15 @@
 package modelo;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
 import org.hibernate.query.Query;
-import java.util.List;
 
 public class EliminarRegistro {
-
 	public static void main(String[] args) {
 
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -22,30 +22,29 @@ public class EliminarRegistro {
 
 			session.beginTransaction();
 
-			String selectHqlBeforeDelete = "FROM Fabricante WHERE id = 11";
-			Query<Fabricante> selectQueryBeforeDelete = session.createQuery(selectHqlBeforeDelete, Fabricante.class);
-			List<Fabricante> fabricantesBeforeDelete = selectQueryBeforeDelete.list();
+			String selectHqlBeforeDelete = "FROM Producto WHERE id = 6";
+			Query<Producto> selectQueryBeforeDelete = session.createQuery(selectHqlBeforeDelete, Producto.class);
+			List<Producto> productosBeforeDelete = selectQueryBeforeDelete.list();
 
-			System.out.println("Registros en la tabla fabricante antes de la eliminación:");
-			for (Fabricante f : fabricantesBeforeDelete) {
-				System.out.println(f.toString());
+			System.out.println("Registros en la tabla producto antes de la eliminacion:");
+			for (Producto p : productosBeforeDelete) {
+				System.out.println(p.toString());
 			}
 
-			String deleteHql = "DELETE FROM Fabricante WHERE id = 10";
+			String deleteHql = "DELETE FROM Producto WHERE id = 6";
 			Query<?> deleteQuery = session.createQuery(deleteHql);
 			deleteQuery.executeUpdate();
 
-			String selectHqlAfterDelete = "FROM Fabricante";
-			Query<Fabricante> selectQueryAfterDelete = session.createQuery(selectHqlAfterDelete, Fabricante.class);
-			List<Fabricante> fabricantesAfterDelete = selectQueryAfterDelete.list();
+			String selectHqlAfterDelete = "FROM Producto";
+			Query<Producto> selectQueryAfterDelete = session.createQuery(selectHqlAfterDelete, Producto.class);
+			List<Producto> productosAfterDelete = selectQueryAfterDelete.list();
 
-			System.out.println("Registros en la tabla Fabricante después de la eliminación:");
-			for (Fabricante f : fabricantesAfterDelete) {
-				System.out.println(f.toString());
+			System.out.println("Registros en la tabla producto despues de la eliminacion:");
+			for (Producto p : productosAfterDelete) {
+				System.out.println(p.toString());
 			}
 
 			session.getTransaction().commit();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

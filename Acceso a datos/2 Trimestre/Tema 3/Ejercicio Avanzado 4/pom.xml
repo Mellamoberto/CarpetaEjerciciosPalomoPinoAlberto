@@ -8,6 +8,20 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>My Project</name>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version> <!-- Utiliza la versión más reciente del plugin -->
+                <configuration>
+                    <source>1.8</source> <!-- Ajusta a la versión de Java que estás utilizando -->
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>

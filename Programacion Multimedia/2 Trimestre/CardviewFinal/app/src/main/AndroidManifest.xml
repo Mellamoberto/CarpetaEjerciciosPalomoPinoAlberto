@@ -13,8 +13,11 @@
         android:theme="@style/Theme.CardviewFinal"
         tools:targetApi="31">
         <activity
+            android:name=".Resultado"
+            android:exported="false" />
+        <activity
             android:name=".Main"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
