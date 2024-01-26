@@ -37,4 +37,12 @@ public class Empresa {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+
+	@Override
+	public String toString() {
+		return "Empresa [id=" + id + ", nombre=" + nombre + ", pais=" + pais + "]";
+	}
+    
+    
 }
