@@ -16,11 +16,9 @@
             android:name=".PersonAdapter"
             android:exported="false" />
         <activity
-            android:name=".Item_person"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Berto">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
