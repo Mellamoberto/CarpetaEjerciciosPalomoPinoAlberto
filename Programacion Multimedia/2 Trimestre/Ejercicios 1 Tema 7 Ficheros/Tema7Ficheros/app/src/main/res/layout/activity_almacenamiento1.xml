@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Almacenamiento1">
+
+    <Button
+        android:id="@+id/btnCrearArchivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Archivo"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnCrearArchivo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCrearArchivo"
+        android:text="Crear Archivo 2"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnLeerArchivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCrearArchivo2"
+        android:text="Leer archivo 1"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnLeerArchivo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLeerArchivo"
+        android:text="Leer archivo 2"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
