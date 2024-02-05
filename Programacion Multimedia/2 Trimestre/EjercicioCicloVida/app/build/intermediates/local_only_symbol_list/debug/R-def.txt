@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btnBackToMain
+id btnCuatro
+id btnDos
+id btnGoToSecond
+id btnMain
+id btnSecondary
+id btnTres
+id btnUno
+id pantalla1
+id pantalla2
+id pantalla3
+id pantalla4
+layout activity_cuatro
+layout activity_dos
+layout activity_ejercicio2_main
+layout activity_ejercicio2_secondary
+layout activity_main
+layout activity_second
+layout activity_tres
+layout activity_uno
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.EjercicioCicloVida
+xml backup_rules
+xml data_extraction_rules
