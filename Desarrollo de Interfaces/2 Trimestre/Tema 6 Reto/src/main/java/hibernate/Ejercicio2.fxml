@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="hibernate.Controller">
+    <children>
+        <TableView fx:id="tableViewFabricantes" prefHeight="214.0" prefWidth="910.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="nombreColumn" prefWidth="200.0" text="Nombre" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
+
