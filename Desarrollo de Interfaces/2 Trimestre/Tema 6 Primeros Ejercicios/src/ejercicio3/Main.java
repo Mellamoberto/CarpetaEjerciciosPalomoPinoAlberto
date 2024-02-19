@@ -16,7 +16,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene3.fxml"));
         Parent root = loader.load();
 
-        primaryStage.setTitle("Mi Aplicación JavaFX");
+        primaryStage.setTitle("Mi Aplicacion JavaFX");
         primaryStage.setScene(new Scene(root, 900, 300));
         primaryStage.show();
 
