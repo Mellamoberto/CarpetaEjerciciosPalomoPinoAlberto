@@ -23,9 +23,23 @@ class MainActivity : AppCompatActivity() {
 
 
         btnPlay1.setOnClickListener {
-            val intent = Intent(this, Resultado::class.java)
+            launchResultadoActivity("video5", "Curso 1")
+        }
 
-                startActivity(intent)
-            }
+        btnPlay2.setOnClickListener {
+            launchResultadoActivity("clouds", "Curso 2")
+        }
+
+        btnPlay3.setOnClickListener {
+            launchResultadoActivity("gallo", "Curso 3")
         }
     }
+
+    private fun launchResultadoActivity(videoName: String, boton: String) {
+        val intent = Intent(this, Resultado::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        intent.putExtra("VIDEO_NAME", videoName)
+        intent.putExtra("MENSAJE", "Has pulsado el botón $boton")
+        startActivity(intent)
+    }
+}
