@@ -10,4 +10,5 @@ module hibernate {
     opens hibernate to javafx.graphics, javafx.fxml, org.hibernate.orm.core;
     opens Ejercicio3 to javafx.graphics, javafx.fxml;
     opens Ejercicio2 to javafx.graphics, javafx.fxml;
+    opens retoVideojuego to javafx.graphics, javafx.fxml;
 }

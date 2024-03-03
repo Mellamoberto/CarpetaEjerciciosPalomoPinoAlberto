@@ -148,6 +148,7 @@ public class Controller {
     }
 
 
+    @FXML
     private void limpiarCampos() {
         nombreTextField.clear();
         anioTextField.clear();
