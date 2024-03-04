@@ -58,6 +58,7 @@ fx:controller="retoVideojuego.Controller"
             <TextField fx:id="sinopsisTextField" layoutX="81.0" layoutY="228.0" />
             <Button fx:id="btnAgregarJuego" layoutX="40.0" layoutY="351.0" mnemonicParsing="false" text="Añadir" onAction="#agregarJuego" />
             <Button fx:id="btnBorrarJuego" layoutX="130.0" layoutY="351.0" mnemonicParsing="false" text="Borrar" onAction="#borrarRegistro" />
+            <Button fx:id="btnModificarJuego" layoutX="170.0" layoutY="351.0" mnemonicParsing="false" text="Modificar" onAction="#actualizarJuego" />
          </children>
       </AnchorPane>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="474.0">

@@ -198,6 +198,71 @@ public class Controller {
     
     
     @FXML
+    private void actualizarJuego() {
+        // Obtener el nombre del juego a actualizar
+        String nombreJuegoActualizar = nombreTextField.getText();
+
+        // Obtener los nuevos valores para el juego
+        String nombre = nombreTextField.getText();
+        int anio = obtenerValorNumerico(anioTextField.getText());
+        String compania = choiceCompania.getValue();
+        double precio = obtenerValorNumerico(precioTextField.getText());
+        String sinopsis = sinopsisTextField.getText();
+        String plataforma = choicePlataforma.getValue();
+
+        if (nombre.isEmpty() || compania == null || plataforma == null) {
+            mostrarError("Todos los campos son obligatorios.");
+            return;
+        }
+
+        // Crear un nuevo TVideoJuego con los valores actualizados
+        TVideoJuego juegoActualizado = new TVideoJuego(0, nombre, anio, compania, precio, sinopsis, plataforma);
+
+        // Llamar al método de actualización en el modelo
+        try {
+            model.updateVideoJuego(nombreJuegoActualizar, juegoActualizado);
+
+            // Actualizar la TableView
+            refreshTableView();
+
+            // Mostrar mensaje de éxito
+            mostrarMensaje("Juego actualizado con éxito.");
+        } catch (SQLException e) {
+            mostrarError("Error al actualizar el juego.");
+            e.printStackTrace();
+        }
+
+        // Limpiar los campos después de actualizar el juego
+        limpiarCampos();
+    }
+    
+    private void mostrarError(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
+    private void mostrarMensaje(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Éxito");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+    
+    private int obtenerValorNumerico(String valor) {
+        try {
+            return Integer.parseInt(valor);
+        } catch (NumberFormatException e) {
+            mostrarError("Ingrese un valor numérico válido.");
+            return 0;
+        }
+    }
+    
+    
+    @FXML
     private void cerrarConexion() {
         // Cierra la conexión a la base de datos
         try {

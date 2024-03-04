@@ -75,6 +75,22 @@ public class TVideoJuegoModel {
 		return videojuegos;
 	}
 	
+	public void updateVideoJuego(String nombreJuego, TVideoJuego juegoActualizado) throws SQLException {
+	    String query = "UPDATE tvideojuegos SET nombre = ?, anio = ?, compania = ?, precio = ?, sinopsis = ?, plataforma = ? WHERE nombre = ?";
+
+	    try (PreparedStatement stmt = conn.prepareStatement(query)) {
+	        stmt.setString(1, juegoActualizado.getNombre());
+	        stmt.setInt(2, juegoActualizado.getAnio());
+	        stmt.setString(3, juegoActualizado.getCompania());
+	        stmt.setDouble(4, juegoActualizado.getPrecio());
+	        stmt.setString(5, juegoActualizado.getSinopsis());
+	        stmt.setString(6, juegoActualizado.getPlataforma());
+	        stmt.setString(7, nombreJuego);
+
+	        stmt.executeUpdate();
+	    }
+	}
+	
 	public void close() throws SQLException {
 		conn.close();
 	}
